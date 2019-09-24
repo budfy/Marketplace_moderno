@@ -322,7 +322,7 @@
 
 
 
-//START OF advantages SECTION STYLES
+//START OF ADVANTAGES SECTION STYLES
 .advantages {
   background-color: $bg;
   padding: 110px 0;
@@ -345,7 +345,7 @@
     &:hover {
       .advantages__item-images {
         background-color: $green;
-        color: white;
+        fill: white;
       }
 
       .advantages__item-title {
@@ -362,7 +362,7 @@
       justify-content: center;
       align-items: center;
       margin: 0 auto 30px;
-      color: black;
+      fill: black;
       transition: all .5s;
 
       & svg {
@@ -384,4 +384,46 @@
   }
 }
 
-//END OF advantages SECTION STYLES
+//END OF ADVANTAGES SECTION STYLES
+
+
+
+//START OF AUTHOR SECTION STYLES
+.author{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__box{
+    max-width: 650px;
+    min-height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+    padding: 0 60px;
+  }
+  &__title{
+    font-size: 30px;
+    line-height: 30px;
+    color: white;
+    margin-right: 45px;
+    max-width: 260px;
+    & span{
+      @include f700
+    }
+  }
+
+  &__link{
+    font-size: 18px;
+    line-height: 36px;
+    padding: 14px 40px;
+    background-color: white;
+  }
+  
+  //&
+}
+//END OF AUTHOR SECTION STYLES
