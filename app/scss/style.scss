@@ -74,6 +74,15 @@
   background-size: cover;
   background-position: center;
   min-height: 533px;
+  &.page-search{
+    min-height: 230px;
+    .search__inner{
+      padding: 55px 0 70px;
+      &-text{
+        margin-bottom: 23px;
+      }
+    }
+  }
 }
 
 .search__inner {
@@ -624,3 +633,57 @@
   padding: 25px 0;
 }
 //END OF FOOTER SECTION STYLES
+
+
+
+//START OF PRODUCT PAGE STYLES
+.product-page__inner{
+  display: flex;
+}
+
+.product-page__aside{
+  margin-right: 30px;
+}
+
+.aside__item{
+  background-color: white;
+  border: 1px solid #dedede;
+  padding: 0 32px 32px;
+  margin-bottom: 30px;
+  width: 270px;
+}
+
+.aside__title{
+border-bottom: 1px solid #dde3e8;
+font-size: 20px;
+color: $bg;
+padding: 22px 0 19px 0;
+@include f700;
+}
+
+.category__list{
+  padding-top: 10px;
+  li{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 0 10px 20px;
+    &::before{
+      content: '\f105';
+      font-family: 'icomoon';
+      color: $green;
+      position: absolute;
+      left: 0;
+    }
+    span{
+      color: #90a4ae;
+      margin-left: 10px;
+    }
+    a{
+      color: $bg;
+    }
+  }
+}
+
+
+//END OF PRODUCT PAGE STYLES
