@@ -1,7 +1,11 @@
 $(function(){
 
-  var mixer = mixitup('.products__inner-box');
-
+  if ($('.products__inner-box').length) {
+    var mixer = mixitup('.products__inner-box');
+  } else {
+  
+  }
+  
   $(".rate-star").rateYo({
     rating: 5,
     starWidth: "12px",
@@ -21,9 +25,9 @@ $(function(){
   type: "double",
     min: 0,
     max: 1000,
-    from: 400,
+    from: 0,
     to: 600,
-    grid: true
+    prefix: "$"
   });
 
 });

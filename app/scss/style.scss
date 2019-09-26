@@ -521,7 +521,7 @@
   position: relative;
   &::before{
     font-family: 'icomoon';
-    content: '\e947';
+    content: '\f041';
     color: $green;
     font-size: 18px;
     position: absolute;
@@ -649,8 +649,8 @@
   background-color: white;
   border: 1px solid #dedede;
   padding: 0 32px 32px;
-  margin-bottom: 30px;
   width: 270px;
+  margin-bottom: 30px;
 }
 
 .aside__title{
@@ -685,5 +685,140 @@ padding: 22px 0 19px 0;
   }
 }
 
+.price-range{
+  form{
+    padding: 20px 0 25px 0;
+  }
+  button{
+    margin-top: 55px;
+    padding: 16px 10px;
+    background-color: $green;
+    text-align: center;
+    color: white;
+    @include f500;
+    width: 100%;
+    display: block;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    &::before{
+      content: '\f002';
+      position: absolute;
+      font-family: 'icomoon';
+      font-size: 15px;
+      top: 43%;
+      transform: translateY(-50%);
+      left: 58px;
+    }
+  }
+}
 
+.irs-min, .irs-max{
+  display: none;
+}
+
+.irs--flat .irs-line{
+  background-color: #f2f5f8;
+  height: 5px;
+}
+
+.irs--flat .irs-bar{
+  background-color: $bg;
+  height: 5px;
+}
+
+.irs--flat .irs-handle{
+  background-color: white;
+  width: 16px;
+  height: 16px;
+  border: 4px solid $green;
+  border-radius: 50%;
+  top: 19px;
+}
+
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+
+.irs-from, .irs-single, .irs-to{
+  top: 45px;
+}
+
+.irs--flat .irs-from, .irs--flat .irs-single, .irs--flat .irs-to {
+  color: $bg;
+  font-size: 15px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.irs--flat .irs-from:before, .irs--flat .irs-single:before, .irs--flat .irs-to:before {
+  display: none;
+}
+
+.product-page__aside{
+  .product__item-img{
+    min-height: 120px;
+  }
+  .product__item{
+    box-shadow: none;
+    padding: 10px 0px;
+  
+    &-info{
+      padding: 0;
+      min-height: 0;
+    }
+    &-content{
+      padding: 0;
+      min-height: 75px;
+      border-bottom: none;
+    }
+    &-title, &-price{
+      font-size: 16px;
+    }
+    &-starnum{
+      display: none;
+    }
+    &-autor{
+      .avatar{
+        min-width: 30px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .rate-star{
+    margin-right: 0;
+    
+  }
+  .jq-ry-container{
+    padding: 0;
+  }
+}
+
+.aside__product-item{
+  .product__item{
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dde3e8;
+  }
+
+  .product__item:last-child{
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .product__item:first-child{
+    margin-top: 26px;
+  }
+  .top-sellers__link{
+    padding: 16px 10px;
+    display: block;
+    background-color: $green;
+    text-align: center;
+    color: white;
+    @include f500;
+  }
+}
 //END OF PRODUCT PAGE STYLES
