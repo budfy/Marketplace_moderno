@@ -639,6 +639,7 @@
 //START OF PRODUCT PAGE STYLES
 .product-page__inner{
   display: flex;
+  padding-bottom: 110px;
 }
 
 .product-page__aside{
@@ -803,15 +804,16 @@ padding: 22px 0 19px 0;
     padding-bottom: 30px;
     border-bottom: 1px solid #dde3e8;
   }
+  
+  .product__item:first-child{
+    margin-top: 26px;
+  }
 
-  .product__item:last-child{
+  .product__item:last-of-type{
     border: none;
     padding-bottom: 0;
   }
 
-  .product__item:first-child{
-    margin-top: 26px;
-  }
   .top-sellers__link{
     padding: 16px 10px;
     display: block;
@@ -819,6 +821,114 @@ padding: 22px 0 19px 0;
     text-align: center;
     color: white;
     @include f500;
+  }
+}
+
+.product-page__content{
+  width: 100%;
+}
+
+.product-page__filter{
+  background-color: white;
+  border: 1px solid #dedede;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button{
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    font-size: 16px;
+    color: #90a4ae;
+    &.active{
+      color: $green;
+    }
+  }
+  &-sort{
+    color: #707070;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    button.icon-sort-amount-desc{
+      font-size: 14px;
+      color: #455a64;
+    }
+
+    button.icon-unsorted{
+      font-size: 18px;
+      color: #707070;
+    }
+  }
+}
+
+.product-page__content{
+
+  .product__item{
+    max-width: 270px;
+    background-color: #fff;
+    
+    &-img{
+      min-height: 180px;
+    }
+
+    &-content{
+      padding: 10px 20px;
+    }
+
+    &-title{
+      font-size: 16px;
+    }
+
+    &-info{
+      min-height: 65px;
+      padding: 10px 20px;
+    }
+    .rate-star{
+      margin-right: 5px;
+    }
+    .jq-ry-container{
+      padding: 0;
+    }
+  }
+
+  .product-page__items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+}
+
+.pagination{
+  &__list{
+    li{
+      display: inline-block;
+      &+li{
+        margin-left: 6px;
+        
+      }
+      a, span{
+        box-shadow: 0px 1px 2px 0px rgba(205, 214, 222, 0.75);
+        background-color: white;
+        width: 43px;
+        height: 38px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $bg;
+        font-size: 16px;
+        @include f500;
+
+        &.active{
+          background-color:$red;
+          color: white;
+        }
+      }
+    }
   }
 }
 //END OF PRODUCT PAGE STYLES
