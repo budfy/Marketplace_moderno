@@ -843,6 +843,8 @@ padding: 22px 0 19px 0;
     border:none;
     font-size: 16px;
     color: #90a4ae;
+    outline: none;
+    transition: all .2s;
     &.active{
       color: $green;
     }
@@ -870,9 +872,10 @@ padding: 22px 0 19px 0;
   .product__item{
     max-width: 270px;
     background-color: #fff;
+    transition: all 0.2s;
     
     &-img{
-      min-height: 180px;
+      min-height: 100%;
     }
 
     &-content{
@@ -930,5 +933,42 @@ padding: 22px 0 19px 0;
       }
     }
   }
+}
+
+.product__item{
+  &-text, &-price>span{
+    display: none;
+  }
+
+  &.list{
+    max-width: 100%;
+    .product__item-img{
+      width: 240px;
+      float: left;
+    }
+    .product__item-text{
+      display: block;
+      font-size: 14px;
+      color: #70838d;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+    .product__item-price{
+      font-size: 30px;
+      span{
+        display: block;
+        font-size: 13px;
+        color: #aeb4bb;
+        margin-top: 30px;
+      }
+    }
+    .product__item-name{
+      max-width:480px;
+    }
+  }
+}
+
+.product-page__content .product__item-content{
+  padding-top: 23px;
 }
 //END OF PRODUCT PAGE STYLES
