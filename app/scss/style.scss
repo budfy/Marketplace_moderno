@@ -87,6 +87,7 @@
       height: auto;
       border-width: 1px;
       overflow: auto;
+      transform: scaleY(1);
     }
     .user__drop-down{
       padding: 20px 20px 12px;
@@ -98,18 +99,22 @@
   border:0px solid #ccc;
   background-color: white;
   position: absolute;
-  top: 69px;
-  left: 20px;
   width: 158px;
   transition: all .5s;
   height: 0;
   overflow: hidden;
- 
+  transform-origin: top;
+  transform: scaleY(0);  
   a{
     font-size: 12px;
     color: #546e7a;
     margin-bottom: 10px;
   }
+}
+
+.user__drop-down{
+  top: 69px;
+  left: 20px;
 }
 
 .basket__box{
