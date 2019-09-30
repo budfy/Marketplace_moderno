@@ -104,3 +104,28 @@ ul,li{
     }
   }
 }
+
+.angle-right{
+  position: relative;
+  padding-left: 15px;
+  &::before{
+    content: '\f105';
+    font-family: 'icomoon';
+    left: 0;
+    color: $green;
+    position: absolute;
+    font-size: 14px;
+  }
+}
+
+.scrollup {
+  width: 26px;
+  height: 25px;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  z-index: 25;
+  text-indent: -9999px;
+  background: url('../images/icons/arrow-top.png') no-repeat;
+}

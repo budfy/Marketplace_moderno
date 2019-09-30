@@ -72,7 +72,8 @@ gulp.task('browser-sync', function() {
       server: {
           baseDir: "app/"
       }
-  });
+      //tunnel: true
+    });
 });
 
 gulp.task('default', gulp.parallel('sass','watch','browser-sync', 'script', 'style'))
