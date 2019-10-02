@@ -46,15 +46,28 @@
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
+    transition: all .5s;
     &.active,&.drop__menu{
       height: 100%;
       flex-wrap: wrap;
       padding: 15px;
     }
+    &.drop__menu{
+      .adaptive__userbar{
+        display: none;
+      }
+    }
   }
+
   .menu__list,
   .header__box {
     display: none;
+  }
+
+  .menu__list{
+    transform: scaleY(0);
+    transition: all .5s;
+    height: 0;
   }
 
   .menu__list li + li{
@@ -68,8 +81,17 @@
 
   .menu__list.active{
     text-align: center;
-    ul{
+    width: 100%;
+    transform: scaleY(1);
+    height: 100%;
+    li{
       display: block;
+      &:hover{
+        background-color: $text;
+      }
+      &+li{
+        margin: 10px 0;
+      }
     }
   }
 
@@ -77,7 +99,7 @@
     margin-right: 20px;
     width: 100%;
 
-    & .user__box, & .basket__box, & .message__box, & .notification__box{
+    & .user__box, & .basket__box, & .message__box, & .notification__box, &-inner>a{
       margin: auto 7px;
       height: auto;
       padding: 0;
@@ -141,6 +163,9 @@
     transform: scaleY(0);
     width: 0;
     text-align: right;
+    & li:hover{
+      background-color: $text;
+    }
     &>li>a{
       color: white;
       padding: 5px 0;

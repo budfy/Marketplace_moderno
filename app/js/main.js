@@ -65,8 +65,7 @@ $('.menu__icon').on('click', function() {
 });
 
 $('.adaptive__userbar-btn').on('click', function() {
-$('.adaptive__userbar-inner').addClass('active');
-$('.adaptive__userbar').toggleClass('active');
+$('.adaptive__userbar, .adaptive__userbar-inner').toggleClass('active');
 $('.menu__list, .menu, .adaptive__userbar-inner.adaptive__drop-down').removeClass('active');
 $('.menu').removeClass('drop__menu')
 });
