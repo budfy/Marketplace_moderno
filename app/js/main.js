@@ -59,18 +59,20 @@ $('.scrollup').click(function () {
 });
 
 $('.menu__icon').on('click', function() {
-  $('.menu__list').toggleClass('menu__list-active');
+  $('.menu__list').toggleClass('active');
+  $('.menu, .adaptive__userbar, .adaptive__userbar-inner>.adaptive__drop-down, .adaptive__userbar-inner').removeClass('active');
 });
 
 $('.adaptive__userbar-btn').on('click', function() {
-$('.adaptive__userbar-inner').toggleClass('active');
-$('.menu').removeClass('active');
-$('.adaptive__userbar-inner>.adaptive__drop-down').removeClass('active');
+$('.adaptive__userbar-inner').addClass('active');
+$('.adaptive__userbar').toggleClass('active');
+$('.menu__list, .menu, .adaptive__userbar-inner.adaptive__drop-down').removeClass('active');
 });
 
 $('.adaptive__userbar-inner>.user__box').on('click', function() {
 $('.adaptive__userbar-inner>.adaptive__drop-down').toggleClass('active');
 $('.menu').toggleClass('active');
+
 });
 
 });

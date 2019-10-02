@@ -57,7 +57,7 @@
     display: none;
   }
 
-  .menu__list-active,
+  .menu__list.active,
   .adaptive__userbar-btn {
     display: block;
   }
@@ -129,7 +129,7 @@
     transform-origin: top;
     transform: scaleY(0);
     width: 0;
-    text-align: center;
+    text-align: right;
     &>li>a{
       color: white;
       padding: 5px 0;
@@ -171,6 +171,8 @@
 
 }
 
+
+
 @media (max-width: 550px) {
   .footer__inner {
     justify-content: flex-start;
@@ -207,5 +209,14 @@
   }
   .adaptive__userbar{
     display: none;
+  }
+}
+
+@media (min-width: 801px){
+  .adaptive__userbar{
+    width: 0;
+    &.active{
+      width: 100%;
+    }
   }
 }
