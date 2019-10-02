@@ -71,8 +71,8 @@ gulp.task('browser-sync', function() {
   browserSync.init({
       server: {
           baseDir: "app/"
-      }
-      //tunnel: true
+      },
+      browser: ["chrome", "firefox"]
     });
 });
 

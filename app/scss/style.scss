@@ -107,7 +107,8 @@
   height: 0;
   overflow: hidden;
   transform-origin: top;
-  transform: scaleY(0);  
+  transform: scaleY(0);
+  z-index: 1;
   a{
     font-size: 12px;
     color: #546e7a;
@@ -448,6 +449,7 @@
   display: flex;
   align-items: center;
   height: 60px;
+  margin-left: 20px;
 }
 
 .menu__list {
@@ -1477,3 +1479,5 @@
 }
 
 //END OF PRODUCT PAGE STYLES
+
+@import 'media';
