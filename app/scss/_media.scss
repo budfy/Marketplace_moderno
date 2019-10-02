@@ -46,7 +46,7 @@
     justify-content: flex-end;
     align-items: center;
     overflow: hidden;
-    &.active{
+    &.active,&.drop__menu{
       height: 100%;
       flex-wrap: wrap;
       padding: 15px;
@@ -57,9 +57,20 @@
     display: none;
   }
 
+  .menu__list li + li{
+    margin-left: 25px;
+  }
+
   .menu__list.active,
   .adaptive__userbar-btn {
     display: block;
+  }
+
+  .menu__list.active{
+    text-align: center;
+    ul{
+      display: block;
+    }
   }
 
   .adaptive__userbar {

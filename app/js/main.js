@@ -60,6 +60,7 @@ $('.scrollup').click(function () {
 
 $('.menu__icon').on('click', function() {
   $('.menu__list').toggleClass('active');
+  $('.menu').toggleClass('drop__menu')
   $('.menu, .adaptive__userbar, .adaptive__userbar-inner>.adaptive__drop-down, .adaptive__userbar-inner').removeClass('active');
 });
 
@@ -67,6 +68,7 @@ $('.adaptive__userbar-btn').on('click', function() {
 $('.adaptive__userbar-inner').addClass('active');
 $('.adaptive__userbar').toggleClass('active');
 $('.menu__list, .menu, .adaptive__userbar-inner.adaptive__drop-down').removeClass('active');
+$('.menu').removeClass('drop__menu')
 });
 
 $('.adaptive__userbar-inner>.user__box').on('click', function() {
