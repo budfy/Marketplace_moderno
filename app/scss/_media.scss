@@ -238,6 +238,22 @@
   }
 }
 
+@media (max-width: 440px){
+  .menu{
+    height: 100%;
+    .adaptive__userbar-inner{
+      display: none;
+      &.active{
+        display: flex;
+      }
+    }
+  }
+
+  .adaptive__userbar .user__box, .adaptive__userbar .basket__box, .adaptive__userbar .message__box, .adaptive__userbar .notification__box, .adaptive__userbar-inner > a{
+    margin: auto 3px;
+  }
+}
+
 
 @media (min-width: 841px) {
   .menu__list {
