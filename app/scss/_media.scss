@@ -7,7 +7,28 @@
     min-width: 90%;
     margin-bottom: 40px;
   }
+
+  .adaptive__drop-down{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+
+  .notify__container{
+    display: flex;
+  }
+
+  .adaptive__userbar{
+        display: flex;
+        width: 100%;
+        margin: 3px;
+        align-items: center;
+        justify-content: flex-end;
+  }
 }
+
+
 
 @media (max-width: 910px) {
   .header__box {
@@ -53,9 +74,11 @@
       padding: 15px;
     }
     &.drop__menu{
-      .adaptive__userbar{
-        display: none;
-      }
+      
+    }
+
+    .btn--off{
+    display: none;
     }
   }
 
@@ -238,9 +261,16 @@
   }
 }
 
-@media (max-width: 440px){
+// @media (max-width: 470px) {
+//   .header__btn-logout{
+//     width: 100%;
+//   }
+// }
+
+@media (max-width: 470px){
   .menu{
     height: 100%;
+    padding: 10px;
     .adaptive__userbar-inner{
       display: none;
       &.active{
@@ -251,6 +281,18 @@
 
   .adaptive__userbar .user__box, .adaptive__userbar .basket__box, .adaptive__userbar .message__box, .adaptive__userbar .notification__box, .adaptive__userbar-inner > a{
     margin: auto 3px;
+  }
+
+  .header__btn-logout{
+    width: 100%;
+  }
+
+  .adaptive__userbar-inner.active{
+    justify-content: space-between;
+  }
+
+  .user-active{
+    margin: 0 5px;
   }
 }
 
@@ -266,7 +308,7 @@
 
 @media (min-width: 801px){
   .adaptive__userbar{
-    width: 0;
+    width: 100%;
     &.active{
       width: 100%;
     }
