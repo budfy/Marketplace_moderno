@@ -7,17 +7,16 @@ let gulp = require('gulp'),
     uglify = require('gulp-uglify')
     cssmin = require('gulp-cssmin');
 
-gulp.task('sass', function () {
-  return gulp.src('app/scss/**/*.scss')
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(autoprefixer({
-          overrideBrowserslist: ['last 8 versions']
-        }))
-        .pipe(gulp.dest('app/css'))
-        .pipe(browserSync.reload({stream: true}))
-
-});
+    gulp.task('sass', function () {
+      return gulp.src('app/scss/**/*.scss')
+            .pipe(sass({outputStyle: 'compressed'}))
+            .pipe(rename({suffix: '.min'}))
+            .pipe(autoprefixer({
+              overrideBrowserslist: ['last 8 versions']
+            }))
+            .pipe(gulp.dest('app/css'))
+            .pipe(browserSync.reload({stream: true}))
+    });
 
 gulp.task('script', function(){
   return gulp.src([
@@ -25,7 +24,7 @@ gulp.task('script', function(){
     'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
     'node_modules/mixitup/dist/mixitup.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
-    'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/ion-rangeslider/js/ion.rangeSlider.js'
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
@@ -34,11 +33,11 @@ gulp.task('script', function(){
 
 gulp.task('style', function(){
   return gulp.src([
+    'node_modules/normalize.css/normalize.css',
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/magnific-popup/dist/magnific-popup.css',
-    'node_modules/normalize-css/normalize.css',
     'node_modules/rateyo/src/jquery.rateyo.css',
-    'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.css'
   ])
   .pipe(concat('libs.min.css'))
   .pipe(cssmin())
@@ -71,9 +70,8 @@ gulp.task('browser-sync', function() {
   browserSync.init({
       server: {
           baseDir: "app/"
-      },
-      browser: ["chrome", "firefox"]
-    });
+      }
+  });
 });
 
 gulp.task('default', gulp.parallel('sass','watch','browser-sync', 'script', 'style'))
