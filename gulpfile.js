@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     browserSync = require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer'),
     concat = require('gulp-concat'),
-    uglify = require('gulp-uglify')
+    uglify = require('gulp-uglify'),
     cssmin = require('gulp-cssmin');
 
     gulp.task('sass', function () {
@@ -29,7 +29,7 @@ gulp.task('script', function(){
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
   .pipe(gulp.dest('app/js'))
-})
+});
 
 gulp.task('style', function(){
   return gulp.src([
@@ -42,7 +42,7 @@ gulp.task('style', function(){
   .pipe(concat('libs.min.css'))
   .pipe(cssmin())
   .pipe(gulp.dest('app/css'))
-})
+});
 
 gulp.task('html', function(){
   return gulp.src('app/*.html')
@@ -63,7 +63,7 @@ gulp.task('watch', function () {
   gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
   gulp.watch('app/*.html', gulp.parallel('html'));
   gulp.watch('app/css/*.css', gulp.parallel('css'));
-  gulp.watch('app/js/*.js', gulp.parallel('js'));
+  gulp.watch('app/js/**/*.js', gulp.parallel('js'));
 });
 
 gulp.task('browser-sync', function() {

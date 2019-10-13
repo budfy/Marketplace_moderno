@@ -26,6 +26,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "gulp-connect-pm2": "0.0.2",
     "normalize.css": "^8.0.1"
   }
 }
