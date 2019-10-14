@@ -1825,32 +1825,78 @@
       width: 34px;
       padding: 0;
       margin: 0;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+
+      &::before{
+        position: absolute;
+        top: 6px;
+        left: 0;
+        right: 0;
+      }
 
       &+li {
-        // margin-left: 8px;
+        margin-left: 4px;
       }
     }
-      .icon-meh-o {
-        background-image: url(../images/icons/shield-1.png);
-      }
+    .icon-meh-o {
+      background-image: url(../images/icons/shield-1.png);
+    }
+    .icon-pagelines {
+      background-image: url(../images/icons/shield-2.png);
+    }
+    .icon-flash {
+      background-image: url(../images/icons/shield-3.png);
+    }
+    .icon-foursquare {
+      background-image: url(../images/icons/shield-4.png);
+    }
+    .icon-yen {
+      background-image: url(../images/icons/shield-5.png);
+    }
+  }
 
-      .icon-pagelines {
-        background-image: url(../images/icons/shield-2.png);
-      }
+  .aside__item.sales-number{
+    padding-bottom: 25px;
+  }
 
-      .icon-flash {
-        background-image: url(../images/icons/shield-3.png);
-      }
+  .aside__item-sales{
+    padding-top: 25px;
+    color: #707070;
+    @include f300;
+    font-size: 16px;
 
-      .icon-foursquare {
-        background-image: url(../images/icons/shield-4.png);
-      }
-
-      .icon-yen {
-        background-image: url(../images/icons/shield-5.png);
+    span{
+      @include f700;
+      color: $bg;
+      font-size: 20px;
+      padding-right: 13px;
+      &::before{
+        content: '\f07a';
+        color: $bg;
+        padding-right: 20px;
+        font-family: 'icomoon';
       }
     }
-  
+  }
+
+  .information__line{
+    font-size: 14px;
+    color: #70838d;
+    margin-top: 25px;
+    line-height: 18px;
+
+    &+.information__line{
+      margin: 20px 0;
+    }
+
+    span{
+      color: $bg;
+      @include f500;
+    }
+  }
 }
 
 //END OF PRODUCT-ONE PAGE STYLES
