@@ -15,3 +15,9 @@ $tomato: #ef6c00;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
+
+@mixin bgimage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
