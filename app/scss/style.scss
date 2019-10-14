@@ -224,6 +224,10 @@
   margin-top: 55px;
   margin-left: 15px;
 
+  &--off{
+    display: none;
+  }
+
   .message__drop-down {
     top: 62px;
     right: 0;
@@ -316,6 +320,10 @@
 
 .notification__box {
   margin-top: 55px;
+
+  &--off{
+    display: none;
+  }
 
   .notification__drop-down {
     top: 62px;

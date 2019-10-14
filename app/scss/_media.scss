@@ -172,6 +172,9 @@
       &.active{
         transform: scaleX(1);
       }
+      &--off{
+        display: none;
+      }
     }
   }
 

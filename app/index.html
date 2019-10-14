@@ -35,7 +35,7 @@
                 <a class="header__phone" href="tel:61383766284">+61 3 8376 6284</a>
               </div>
               <div class="header__box">
-                <div class="notification__box">
+                <div class="notification__box notification__box--off">
                   <a href="#" class="header__circle header__circle-active notification icon-bell-o"><span>8</span></a>
                   <div class="notification__drop-down">
                     <a href="#" class="notification__link">
@@ -73,7 +73,8 @@
                     </a>
                   </div>
                 </div>
-                <div class="message__box">
+
+                <div class="message__box message__box--off">
                   <a href="#" class="header__circle header__circle-active message icon-envelope-o"><span>5</span></a>
                   <div class="message__drop-down unread">
                     <a href="#" class="message__link">
@@ -144,8 +145,8 @@
                   </div>
                 </div>
 
-                <div class="user__box">
-                  <a href="#" class="user user-active">
+                <div class="user__box user__box--off">
+                  <a href="#" class="user">
                     <div class="user__inner">
                       <div class="user__images" style="background-image: url(images/content/avatar-01.jpg)"></div>
                       <div class="user__info">
@@ -165,9 +166,9 @@
                     <li><a class="angle-right" href="#">Withdraws</a></li>
                   </ul>
                 </div>
-                <a href="" class="header__btn header__btn-login header__btn-login--off">Login</a>
-                <a href="" class="header__btn header__btn-register header__btn-register--off">Register</a>
-                <a href="" class="header__btn header__btn-logout">Logout</a>
+                <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn header__btn-login header__btn-login--on">Login</a>
+                <a href="#" class="header__btn header__btn-register header__btn-register--on">Register</a>
+                <a href="#" class="header__btn header__btn-logout--off">Logout</a>
               </div>
 
             </div>
@@ -181,18 +182,18 @@
 
 
               <div class="adaptive__userbar-btn" style="background-image: url(images/content/avatar-01.jpg)"></div>
-              <div class="adaptive__userbar-notify adaptive__userbar-notify--on btn--off"></div>
+              <div class="adaptive__userbar-notify adaptive__userbar-notify--on "></div>
               <div class="adaptive__userbar">
-                <a href="" class="header__btn header__btn-login btn--off">Login</a>
-                <a href="" class="header__btn header__btn-register btn--off">Register</a>
-                <div class="adaptive__userbar-inner">
+                <a href="#" class="header__btn header__btn-login">Login</a>
+                <a href="#" class="header__btn header__btn-register">Register</a>
+                <div class="adaptive__userbar-inner adaptive__userbar-inner--off">
                   <div class="notify__container">
 
-                    <div class="notification__box">
+                    <div class="notification__box notification__box--off">
                       <a href="#"
                         class="header__circle header__circle-active notification icon-bell-o"><span>8</span></a>
                     </div>
-                    <div class="message__box">
+                    <div class="message__box message__box--off">
                       <a href="#"
                         class="header__circle header__circle-active message icon-envelope-o"><span>5</span></a>
                     </div>
@@ -1092,6 +1093,11 @@
 
 
   </div>
+
+  <div id="modal">
+    123456789
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
