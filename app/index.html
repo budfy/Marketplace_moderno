@@ -166,7 +166,7 @@
                     <li><a class="angle-right" href="#">Withdraws</a></li>
                   </ul>
                 </div>
-                <a data-fancybox data-src="#modal" href="javascript:;" class="header__btn header__btn-login header__btn-login--on">Login</a>
+                <a href="#login__modal" class="header__btn header__btn-login header__btn-login--on">Login</a>
                 <a href="#" class="header__btn header__btn-register header__btn-register--on">Register</a>
                 <a href="#" class="header__btn header__btn-logout--off">Logout</a>
               </div>
@@ -184,7 +184,7 @@
               <div class="adaptive__userbar-btn" style="background-image: url(images/content/avatar-01.jpg)"></div>
               <div class="adaptive__userbar-notify adaptive__userbar-notify--on "></div>
               <div class="adaptive__userbar">
-                <a href="#" class="header__btn header__btn-login">Login</a>
+                <a href="#login__modal" class="header__btn header__btn-login">Login</a>
                 <a href="#" class="header__btn header__btn-register">Register</a>
                 <div class="adaptive__userbar-inner adaptive__userbar-inner--off">
                   <div class="notify__container">
@@ -212,8 +212,9 @@
                         </div>
                       </div>
                     </a>
+                  </div>
 
-                  </div><a href="" class="header__btn header__btn-logout">Logout</a>
+                  <a href="" class="header__btn header__btn-logout">Logout</a>
                   <ul class="adaptive__drop-down">
                     <li><a class="angle-right" href="#">Profile Page</a></li>
                     <li><a class="angle-right" href="#">Portfolio</a></li>
@@ -286,6 +287,7 @@
                   </a>
                 </li>
               </ul>
+            </div>
           </nav>
         </div>
       </header>
@@ -1082,7 +1084,7 @@
       <div class="footer__copy">
         <div class="container">
           <div class="footer__copy-text">
-            &copy 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
+            © 2017 Foxtar market place. Trademarks and brands are the property of their respective owners.
           </div>
         </div>
       </div>
@@ -1094,8 +1096,24 @@
 
   </div>
 
-  <div id="modal">
-    123456789
+  <div id="login__modal" class="white-popup mfp-hide">
+    <div class="login__wrapper">
+      <div class="mfp-close icon-close"></div>
+      <div class="login__title">
+        Login
+      </div>
+      <form>
+        <label class="login__lable-name">
+          <input type="text" placeholder="Name" required>
+        </label>
+        <label class="login__lable-pass">
+          <input type="password" placeholder="Password" required>
+        </label>
+        <button type="submit">submit</button>
+        <a class="create-acc" href="#">Creat An Account?</a>
+        <a class="lost-pass" href="#">Lost Password?</a>
+      </form>
+    </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

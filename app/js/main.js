@@ -85,4 +85,10 @@ $('.product-one__tabs .tab').on('click', function(event) {
     return false;
   });
 
+  $('.header__btn-login').magnificPopup({
+    type:'inline',
+    midClick: true,
+    closeBtnInside: true
+  });
+
 });
