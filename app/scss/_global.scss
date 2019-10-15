@@ -133,3 +133,11 @@ ul,li{
   text-indent: -9999px;
   background: url('../images/icons/arrow-top.png') no-repeat;
 }
+
+.head__pagetitle{
+  @include f500;
+  font-size: 24px;
+  color: #444;
+  padding: 23px 27px;
+  border-bottom: 1px solid #d7d7d7;
+}
