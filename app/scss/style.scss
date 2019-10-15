@@ -224,7 +224,7 @@
   margin-top: 55px;
   margin-left: 15px;
 
-  &--off{
+  &--off {
     display: none;
   }
 
@@ -321,7 +321,7 @@
 .notification__box {
   margin-top: 55px;
 
-  &--off{
+  &--off {
     display: none;
   }
 
@@ -506,6 +506,7 @@
     color: white;
   }
 }
+
 //END OF HEADER STYLES
 
 
@@ -516,9 +517,10 @@
   background: #FFF;
   padding: 25px;
   max-width: 400px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-#login__modal{
+#login__modal {
   background-color: $green;
   max-width: 730px;
   width: 100%;
@@ -526,7 +528,7 @@
   padding-bottom: 100px;
 }
 
-.login__title{
+.login__title {
   text-align: center;
   text-transform: uppercase;
   @include f700;
@@ -535,17 +537,18 @@
   margin-bottom: 40px;
 }
 
-.login__wrapper{
-  form{
+.login__wrapper {
+  form {
     max-width: 400px;
     margin: 0 auto;
   }
-  label{
+
+  label {
     position: relative;
     display: block;
     width: 100%;
-    
-    &::before{
+
+    &::before {
       position: absolute;
       font-family: 'icomoon';
       font-size: 14px;
@@ -556,30 +559,31 @@
     }
   }
 
-  .login__lable-name::before{
-content: '\f007'
+  .login__lable-name::before {
+    content: '\f007'
   }
 
-  .login__lable-pass::before{
+  .login__lable-pass::before {
     content: '\f023'
   }
 
-  input{
+  input {
     height: 43px;
     margin-bottom: 8px;
-    border:none;
+    border: none;
     background-color: #76ae36;
     color: white;
     font-size: 14px;
     padding-left: 40px;
     display: block;
     width: 100%;
-    &::placeholder{
+
+    &::placeholder {
       color: white;
     }
   }
 
-  button{
+  button {
     margin-top: 19px;
     padding: 18px 0 16px;
     color: black;
@@ -591,13 +595,13 @@ content: '\f007'
     box-shadow: 0 2px 2px rgba(118, 174, 54, 0.75);
     width: 140px;
 
-    &:active{
+    &:active {
       box-shadow: none;
       outline: none;
     }
   }
 
-  .create-acc{
+  .create-acc {
     margin-left: 6px;
     padding: 12px 0 15px 65px;
     width: 250px;
@@ -605,9 +609,9 @@ content: '\f007'
     color: white;
     font-size: 18px;
     position: relative;
-    
-    &::before{
-      content:'\f044';
+
+    &::before {
+      content: '\f044';
       position: absolute;
       top: 47%;
       transform: translateY(-50%);
@@ -616,7 +620,7 @@ content: '\f007'
     }
   }
 
-  .lost-pass{
+  .lost-pass {
     display: block;
     margin-top: 27px;
     color: white;
@@ -630,9 +634,10 @@ content: '\f007'
     padding: 0;
     top: 17px;
     right: 7px;
-}
+  }
 
 }
+
 //END OF LOGIN MODAL WINDOW
 
 
@@ -1962,7 +1967,7 @@ content: '\f007'
       text-align: center;
       position: relative;
 
-      &::before{
+      &::before {
         position: absolute;
         top: 6px;
         left: 0;
@@ -1973,39 +1978,45 @@ content: '\f007'
         margin-left: 4px;
       }
     }
+
     .icon-meh-o {
       background-image: url(../images/icons/shield-1.png);
     }
+
     .icon-pagelines {
       background-image: url(../images/icons/shield-2.png);
     }
+
     .icon-flash {
       background-image: url(../images/icons/shield-3.png);
     }
+
     .icon-foursquare {
       background-image: url(../images/icons/shield-4.png);
     }
+
     .icon-yen {
       background-image: url(../images/icons/shield-5.png);
     }
   }
 
-  .aside__item.sales-number{
+  .aside__item.sales-number {
     padding-bottom: 25px;
   }
 
-  .aside__item-sales{
+  .aside__item-sales {
     padding-top: 25px;
     color: #707070;
     @include f300;
     font-size: 16px;
 
-    span{
+    span {
       @include f700;
       color: $bg;
       font-size: 20px;
       padding-right: 13px;
-      &::before{
+
+      &::before {
         content: '\f07a';
         color: $bg;
         padding-right: 20px;
@@ -2014,17 +2025,17 @@ content: '\f007'
     }
   }
 
-  .information__line{
+  .information__line {
     font-size: 14px;
     color: #70838d;
     margin-top: 25px;
     line-height: 18px;
 
-    &+.information__line{
+    &+.information__line {
       margin: 20px 0;
     }
 
-    span{
+    span {
       color: $bg;
       @include f500;
     }
@@ -2032,5 +2043,135 @@ content: '\f007'
 }
 
 //END OF PRODUCT-ONE PAGE STYLES
+
+
+
+//START OF PAGE 404 STYLES
+.page-404 {
+
+  &__wrapper {
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+    margin-bottom: 150px;
+  }
+
+  &__head {
+    @include f500;
+    font-size: 24px;
+    color: #444;
+    padding: 23px 27px;
+    border-bottom: 1px solid #d7d7d7;
+  }
+
+  &__inner {
+    text-align: center;
+    background-color: $green;
+    color: white;
+  }
+
+  &__404 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    font-size: 300px;
+    color: #fffefe;
+    line-height: 100%;
+    padding-top: 70px;
+    position: relative;
+    padding-bottom: 20px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url(../images/404-man.png);
+      width: 150px;
+      height: 292px;
+      margin-left: 21px;
+    }
+  }
+
+  &__title {
+    font-family: "Open Sans";
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 6px;
+    margin-top: 60px;
+  }
+
+  &__text {
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 530px;
+    margin: 33px auto 60px;
+  }
+
+  &__link {
+    color: #ffffff;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 22px 32px;
+    margin-bottom: 100px;
+  }
+}
+
+//END OF PAGE 404 STYLES
+
+
+
+//START OF PAGE ABOUT STYLES
+.about {
+
+  &__wrapper {
+    border: 1px solid #d7d7d7;
+    background-color: #ffffff;
+    margin-bottom: 150px;
+  }
+
+  &__head {
+    @include f500;
+    font-size: 24px;
+    color: #444;
+    padding: 23px 27px;
+    border-bottom: 1px solid #d7d7d7;
+  }
+
+  &__inner {
+    text-align: center;
+    background-color: white;
+    color: white;
+    padding: 44px 66px 50px 50px;
+    text-align: left;
+
+    h4 {
+      @include f700;
+      font-size: 20px;
+      color: #444444;
+      padding-bottom: 23px;
+      margin: 0;
+      line-height: 24px;
+    }
+
+    p {
+      color: #707070;
+      font-size: 15px;
+      line-height: 24px;
+
+      &+h4 {
+        padding-top: 53px;
+      }
+    }
+  }
+
+}
+
+//END OF PAGE ABOUT STYLES
 
 @import 'media';
