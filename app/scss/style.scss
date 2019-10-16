@@ -2161,43 +2161,43 @@
 
 
 //START OF PAGE CONTACT STYLES
-.contact{
+.contact {
   &__wrapper {
     border: 1px solid #d7d7d7;
     background-color: #ffffff;
-    padding: 0 40px; 
+    padding: 0 40px;
     margin-bottom: 150px;
   }
 
-  &__head{
+  &__head {
     padding-left: 0;
   }
 
-  &__map{
+  &__map {
     margin-top: 33px;
     max-width: 1090px;
     width: 100%;
     overflow-x: hidden;
   }
 
-  &__box{
+  &__box {
     display: flex;
     padding-top: 60px;
   }
 
-  &__details{
+  &__details {
     margin-right: 30px;
     max-width: 330px;
     width: 100%;
 
-    address{
+    address {
       font-style: normal;
     }
 
-    &-item{
+    &-item {
       margin-bottom: 30px;
 
-      &__title{
+      &__title {
         @include f500;
         padding-bottom: 20px;
         position: relative;
@@ -2205,9 +2205,9 @@
         color: $bg;
         padding-left: 40px;
         margin-bottom: 20px;
-        font-family: 'Roboto'  !important;
+        font-family: 'Roboto' !important;
 
-        &::after{
+        &::after {
           content: '';
           width: 44px;
           height: 4px;
@@ -2217,7 +2217,7 @@
           bottom: 0;
         }
 
-        &::before{
+        &::before {
           color: $green;
           font-size: 24px;
           position: absolute;
@@ -2226,7 +2226,7 @@
         }
       }
 
-      &__text{
+      &__text {
         padding-left: 40px;
         color: #707070;
         max-width: 230px;
@@ -2235,11 +2235,11 @@
     }
   }
 
-  &__form{
+  &__form {
     width: 100%;
     padding-bottom: 15px;
-    
-    &-title{
+
+    &-title {
       @include f500;
       color: #333333;
       font-size: 24px;
@@ -2247,13 +2247,13 @@
       padding-bottom: 23px;
     }
 
-    &-row{
+    &-row {
       display: flex;
       justify-content: space-between;
 
     }
 
-    input{
+    input {
       border: none;
       height: 43px;
       padding-left: 17px;
@@ -2263,13 +2263,13 @@
       margin-bottom: 30px;
       display: block;
 
-      &::placeholder{
+      &::placeholder {
         font-size: 15px;
         color: #7a7a7a;
       }
     }
-    
-    textarea{
+
+    textarea {
       border: none;
       resize: none;
       padding: 13px 17px;
@@ -2280,13 +2280,13 @@
       display: block;
       margin-bottom: 23px;
 
-      &::placeholder{
+      &::placeholder {
         font-size: 15px;
         color: #7a7a7a;
       }
     }
-    
-    button{
+
+    button {
       border: none;
       background-color: $green;
       text-transform: uppercase;
@@ -2299,6 +2299,123 @@
     }
   }
 }
+
 //END OF PAGE CONTACT STYLES
+
+
+
+//START OF PAGE SETTINGS STYLES
+.settings {
+  padding-bottom: 100px;
+
+  .product-one__tabs.settings__tabs {
+    display: flex;
+
+    .tabs {
+      max-width: 270px;
+      width: 100%;
+      height: 100%;
+      margin-right: 10px;
+      border: 1px solid #dedede;
+      border-bottom: none;
+      display: block;
+      text-align: left;
+
+      span {
+        display: block;
+        background-color: white;
+        border: none;
+        border-bottom: 1px solid #dedede;
+        padding: 17px 17px 17px 50px;
+        width: 100%;
+        color: #707070;
+        font-size: 14px;
+        @include f500;
+
+        &::before {
+          left: 23px;
+          color: #444
+        }
+
+        &.active {
+          border-bottom: 2px solid $green;
+          color: #37474f;
+
+          &::before {
+            color: $green;
+          }
+        }
+      }
+
+      .tab+.tab {
+        border-left: none;
+      }
+    }
+
+    .tab_content {
+      width: 100%;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
+  }
+
+  .page-box {
+    border: 1px solid #dedede;
+    background-color: white;
+    min-height: 100%;
+
+    &__title {
+      border-bottom: 1px solid #dedede;
+      @include f500;
+      font-size: 24px;
+      padding: 18px 34px;
+      color: $bg;
+    }
+
+    &__content {
+      padding: 30px 35px 80px;
+
+    }
+
+    .settings__line {
+      margin-bottom: 21px;
+      display: flex;
+      align-items: center;
+
+      label {
+        color: #444444;
+        font-size: 15px;
+        width: 260px;
+      }
+
+      input{
+        max-width: 540px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+        color: black;
+        padding: 0 10px;
+      }
+
+      select {
+        max-width: 540px;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #d7d7d7;
+        background-color: #f9f9f9;
+        color: black;
+        padding: 0 10px;
+      }
+    }
+  }
+}
+//END OF PAGE SETTINGS STYLES
+
+
+
+//START OF PAGE --- STYLES
+//END OF PAGE --- STYLES
 
 @import 'media';
