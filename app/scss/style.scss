@@ -974,9 +974,7 @@
 
 //START OF AUTHOR SECTION STYLES
 .author {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include bgimage;
   min-height: 750px;
   display: flex;
   justify-content: center;
@@ -2389,7 +2387,7 @@
         width: 260px;
       }
 
-      input{
+      input {
         max-width: 540px;
         width: 100%;
         height: 40px;
@@ -2411,11 +2409,311 @@
     }
   }
 }
+
 //END OF PAGE SETTINGS STYLES
 
 
 
-//START OF PAGE --- STYLES
-//END OF PAGE --- STYLES
+//START OF PAGE PROFILE STYLES
+.profile {
+
+  .product-author__box {
+    padding: 25px 0;
+    display: flex;
+
+    .author__avatar {
+      margin-right: 14px;
+    }
+
+    .author__info {
+
+      &-name {
+        font-size: 18px;
+        color: $bg;
+        margin-bottom: 2px;
+      }
+
+    }
+  }
+
+  &__status {
+    color: #707070;
+    font-size: 13px;
+    padding: 6px 9px 5px 27px;
+    border: 1px solid #cccccc;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+  }
+
+  &-online {
+    &::before {
+      background-color: $green;
+    }
+  }
+
+  &-offline {
+    &::before {
+      background-color: $grey;
+    }
+  }
+
+  .author__awards-list {
+    li {
+      display: inline-block;
+      @include bgimage;
+      height: 37px;
+      width: 34px;
+      padding: 0;
+      margin: 0;
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        right: 0;
+      }
+
+      &+li {
+        margin-left: 4px;
+      }
+    }
+
+    .icon-meh-o {
+      background-image: url(../images/icons/shield-1.png);
+    }
+
+    .icon-pagelines {
+      background-image: url(../images/icons/shield-2.png);
+    }
+
+    .icon-flash {
+      background-image: url(../images/icons/shield-3.png);
+    }
+
+    .icon-foursquare {
+      background-image: url(../images/icons/shield-4.png);
+    }
+
+    .icon-yen {
+      background-image: url(../images/icons/shield-5.png);
+    }
+  }
+
+  &__inner {
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  &__aside {
+    margin-bottom: 13px;
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+
+
+    &-message {
+      margin-bottom: 17px;
+      font-family: 'Roboto', sans-serif !important;
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      color: white;
+      @include f500;
+      background-color: $text;
+      padding: 18px 10px;
+      box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
+      transition: all .2s;
+
+      &:active {
+        box-shadow: none;
+      }
+
+      &::before {
+        font-family: 'icomoon';
+        margin-right: 12px;
+      }
+    }
+
+    &-following {
+      margin-bottom: 17px;
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: 16px;
+      color: white;
+      @include f700;
+      background-color: $green;
+      padding: 15px 10px;
+      box-shadow: 0 1px 2px rgba(69, 90, 100, 0.75);
+      transition: all .2s;
+
+      &:active {
+        box-shadow: none;
+      }
+
+    }
+  }
+
+  &__content {
+    width: 100%;
+
+    &-banner {
+      padding: 20px;
+      border: 1px solid #dedede;
+      background-color: #fff;
+      margin-bottom: 32px;
+
+      &__image {
+        @include bgimage;
+        min-height: 332px;
+      }
+    }
+
+    &-items {
+      display: flex;
+      border: 1px solid #dedede;
+    }
+  }
+
+  &-item {
+    width: 25%;
+    background-color: white;
+    text-align: center;
+    padding: 20px 5px 17px;
+    color: $bg;
+
+    &+& {
+      border-left: 1px solid #dedede;
+    }
+
+    &__title {
+      @include f500;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &__content {
+
+      .rate-star {
+        margin-right: 2px;
+      }
+
+      span {
+        @include f500;
+      }
+    }
+
+    &__sales {
+      @include f500;
+    }
+  }
+}
+
+.profile-settings {
+
+  .product-one__tabs.settings__tabs {
+    .tabs {
+      margin-right: 30px;
+
+      span{
+        font-family: 'Roboto', sans-serif !important;
+        position: relative;
+        &::before{
+          position: absolute;
+          font-family: 'icomoon';
+          left:23px;
+          color: #d0d0d0;
+        }
+      }
+    }
+  }
+
+  .personal__box{
+    background-color: white;
+    padding: 35px 40px 25px;
+    border: 1px solid #dedede;
+
+    &-title{
+      margin-bottom: 25px;
+      @include f700;
+      color: $bg;
+      font-size: 20px;
+    }
+
+    &-text{
+      margin-bottom: 20px;
+
+      p{
+        color: #707070;
+      }
+    }
+
+    &-item{
+      &__head{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+
+      &__title{
+        @include f500;
+        font-size: 16px;
+        line-height: 24px;
+        font-style: italic;
+      }
+
+      &__number{
+        @include f700;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      &__line{
+        height: 15px;
+        background-color: #f4f4f4;
+        border-radius: 3px;
+        margin-bottom: 23px;
+
+        span{
+          display: block;
+          height: 15px;
+          border-radius: 3px;
+          background-image: url(../images/progress-bar-item.jpg);
+          background-repeat: repeat-x;
+        }
+      }
+    }
+  }
+}
+
+
+
+//END OF PAGE PROFILE STYLES
+
+
+
+//START OF PAGE UPLOAD PRODUCTS STYLES
+//END OF PAGE UPLOAD PRODUCTS STYLES
+
+
+
+//START OF PAGE WITHDRAWALS STYLES
+//END OF PAGE WITHDRAWALS STYLES
 
 @import 'media';
