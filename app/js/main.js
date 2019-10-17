@@ -91,4 +91,6 @@ $('.product-one__tabs .tab, .settings__tabs .tab').on('click', function(event) {
     closeBtnInside: true
   });
 
+  $('input[type="file"], select').styler();
+
 });

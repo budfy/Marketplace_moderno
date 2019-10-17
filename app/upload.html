@@ -320,103 +320,80 @@
           <div class="breadcrumbs__inner">
             <ul class="breadcrumbs__list">
               <li><a href="#">Home</a></li>
-              <li><span>Settings</span></li>
+              <li><span>Upload product</span></li>
             </ul>
           </div>
         </div>
       </div>
       <!-- END OF BREADCRUMBS CODE -->
 
-
-
-      <div class="settings">
+      <!-- --------------------START OF MAIN SECTION-------------------- -->
+      <section class="upload">
         <div class="container">
-
-          <div class="product-one__tabs settings__tabs">
-            <div class="tabs">
-              <span class="angle-right tab active" data-id="1">Personal Information</span>
-              <span class="angle-right tab" data-id="2">Profile</span>
-              <span class="angle-right tab" data-id="3">Badges</span>
-              <span class="angle-right tab" data-id="4">E-mail Settings</span>
-              <span class="angle-right tab" data-id="5">Social Network</span>
-            </div>
-
-            <div class="tab_content">
-
-              <div class="tab-item active-tab" id="1">
-                <div class="page-box">
-                  <div class="page-box__title">Personal Information</div>
-                  <div class="page-box__content">
-                    <form>
-                      <div class="settings__line">
-                        <label>First Name</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>Last Name</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>Company Name</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>Country</label>
-                        <select type="text">
-                          <option disabled selected>Select Your Country</option>
-                          <option>Ukraine</option>
-                          <option>Not Ukraine</option>
-                        </select>
-                      </div>
-                      <div class="settings__line">
-                        <label>Address Line 1</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>Address Line 2</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>City</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>State / Province / Region</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>Zip / Postal Code</label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label></label>
-                        <button type="submit">Update</button>
-                      </div>
-                    </form>
-                  </div>
+          <form>
+            <div class="upload__inner">
+              <div class="upload__inner-title head__pagetitle">Upload Your item</div>
+              <div class="upload__inner-content">
+                <div class="upload-line">
+                  <label>Select Categories<span>*</span></label>
+                  <select required>
+                    <option disabled selected>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                    <option>Select</option>
+                  </select>
+                </div>
+                <div class="upload-line">
+                  <label>Product Name<span>*</span></label>
+                  <input placeholder="Enter your product name here..." required>
+                </div>
+                <div class="upload-line">
+                  <label>Product Description<span>*</span></label>
+                  <textarea placeholder="&lt;h1&gt; Type your text  here &lt;/h1&gt;" required></textarea>
+                </div>
+                <div class="upload-line">
+                  <label>Upload Main File<span>*</span></label>
+                  <input type="file" required data-placeholder="No File Choosen" data-browse="Choose File">
+                </div>
+                <div class="upload-line">
+                  <label>Upload Screenshots<span>*</span></label>
+                  <input type="file" required data-placeholder="No File Choosen" data-browse="Choose File">
+                </div>
+                <div class="upload-line">
+                  <label>File Included<span>*</span></label>
+                  <select required>
+                    <option disabled selected>Select File Type </option>
+                    <option>Select File Type </option>
+                    <option>Select File Type </option>
+                    <option>Select File Type </option>
+                  </select>
+                </div>
+                <div class="upload-line">
+                  <label>File Dimensions<span>*</span></label>
+                  <input placeholder="Enter the item  dimentionss here..." required>
+                </div>
+                <div class="upload-line">
+                  <label>Item Tags<span>*</span></label>
+                  <input placeholder="Enter Tag Here" required>
                 </div>
               </div>
-
-              <div class="tab-item" id="2">
-                
-              </div>
-
-              <div class="tab-item" id="3">
-                
-              </div>
-
-              <div class="tab-item" id="4">
-                
-              </div>
-
-              <div class="tab-item" id="5">
-                
+              <div class="upload__inner-title head__pagetitle">Set Your Price (US$)</div>
+              <div class="upload__inner-content">
+                <div class="upload-line">
+                  <label>Regular License<span>*</span></label>
+                  <input placeholder="$00.00" required>
+                </div>
+                <div class="upload-line">
+                  <label>Extended License<span>*</span></label>
+                  <input placeholder="$00.00" required>
+                </div>
+                <button type="submit">Submit</button>
               </div>
             </div>
-          </div>
-
+          </form>
         </div>
-      </div>
+      </section>
+      <!-- ---------------------END OF MAIN SECTION--------------------- -->
 
 
 

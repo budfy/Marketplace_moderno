@@ -1892,6 +1892,62 @@
       @include f500;
       color: $red;
     }
+
+    .jq-selectbox {
+      width: 100%;
+      max-width: 82px;
+    }
+
+    .jq-selectbox__select {
+      height: 27px;
+      padding: 6px 10px;
+      border: 1px solid #cccccc;
+      border-bottom-color: #cccccc;
+      border-radius: 0;
+      background: white;
+      box-shadow: none;
+      font-family: 'Roboto-Regular', sans-serif;
+      font-size: 13px;
+      color: #707070;
+      text-shadow: none;
+      line-height: 15px;
+    }
+
+    .jq-selectbox {
+
+      &__trigger {
+        border-left: none;
+
+        &-arrow {
+          border: none;
+          top: 0;
+          right: 15px;
+          font-size: 13px;
+          line-height: 27px;
+
+          &::before {
+            font-family: 'icomoon';
+            content: '\f0d7';
+            color: $green;
+          }
+        }
+      }
+
+      &__dropdown {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        background: #FFF;
+        box-shadow: none;
+        font: 14px/14px 'Roboto', sans-serif;
+        top: 26px !important;
+      }
+
+      li {
+        padding-left: 5px;
+        font-size: 13px;
+      }
+    }
   }
 
   .product-price {
@@ -2406,7 +2462,69 @@
         color: black;
         padding: 0 10px;
       }
+
+      .jq-selectbox {
+        width: 100%;
+        max-width: 540px;
+      }
+
+      .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0;
+        background: #f9f9f9;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+      }
+
+      .jq-selectbox {
+
+        &__trigger {
+          border-left: none;
+
+          &-arrow {
+            border: none;
+            top: 0;
+            right: 20px;
+            font-size: 15px;
+            line-height: 40px;
+
+            &::before {
+              font-family: 'icomoon';
+              content: '\f0d7';
+              color: #444444;
+            }
+          }
+        }
+
+        &__dropdown {
+          margin: 0;
+          padding: 0;
+          border-radius: 0;
+          background: #FFF;
+          box-shadow: none;
+          font: 14px/18px Arial, sans-serif;
+        }
+
+        li {
+          padding-left: 18px;
+        }
+      }
     }
+  }
+
+  button {
+    @include f500;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 16px 30px;
+    background-color: $green;
+    border: none;
   }
 }
 
@@ -2631,66 +2749,67 @@
     .tabs {
       margin-right: 30px;
 
-      span{
+      span {
         font-family: 'Roboto', sans-serif !important;
         position: relative;
-        &::before{
+
+        &::before {
           position: absolute;
           font-family: 'icomoon';
-          left:23px;
+          left: 23px;
           color: #d0d0d0;
         }
       }
     }
   }
 
-  .personal__box{
+  .personal__box {
     background-color: white;
     padding: 35px 40px 25px;
     border: 1px solid #dedede;
 
-    &-title{
+    &-title {
       margin-bottom: 25px;
       @include f700;
       color: $bg;
       font-size: 20px;
     }
 
-    &-text{
+    &-text {
       margin-bottom: 20px;
 
-      p{
+      p {
         color: #707070;
       }
     }
 
-    &-item{
-      &__head{
+    &-item {
+      &__head {
         display: flex;
         justify-content: space-between;
         margin-bottom: 14px;
       }
 
-      &__title{
+      &__title {
         @include f500;
         font-size: 16px;
         line-height: 24px;
         font-style: italic;
       }
 
-      &__number{
+      &__number {
         @include f700;
         font-size: 16px;
         line-height: 24px;
       }
 
-      &__line{
+      &__line {
         height: 15px;
         background-color: #f4f4f4;
         border-radius: 3px;
         margin-bottom: 23px;
 
-        span{
+        span {
           display: block;
           height: 15px;
           border-radius: 3px;
@@ -2702,18 +2821,349 @@
   }
 }
 
-
-
 //END OF PAGE PROFILE STYLES
 
 
 
 //START OF PAGE UPLOAD PRODUCTS STYLES
+.upload {
+
+  &__inner {
+    background-color: white;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 110px;
+
+    &-title {
+      padding-left: 34px;
+      color: $bg;
+      border-bottom: 1px solid #d7d7d7;
+      margin-bottom: 43px;
+    }
+
+    &-content {
+      margin-bottom: 30px;
+      padding-left: 45px;
+      padding-right: 50px;
+    }
+
+    button {
+      color: #ffffff;
+      background-color: $green;
+      border: none;
+      padding: 15px 36px;
+      @include f500;
+      margin-left: 180px;
+      cursor: pointer;
+    }
+  }
+
+  &-line {
+    margin-bottom: 25px;
+    display: flex;
+
+    label {
+      min-width: 180px;
+      padding-right: 15px;
+      color: #444444;
+      padding-top: 5px;
+
+      span {
+        color: $green;
+        font-size: 24px;
+      }
+
+    }
+
+    select,
+    input,
+    textarea {
+      width: 100%;
+      display: block;
+      border: 1px solid #d7d7d7;
+      background-color: #f9f9f9;
+      height: 40px;
+      padding: 0 18px;
+
+      &::placeholder {
+        color: #707070;
+      }
+    }
+
+    textarea {
+      resize: none;
+      padding: 8px 18px;
+    }
+
+    input[type="file"] {
+      outline: none;
+    }
+
+    .jq-selectbox {
+      width: 100%;
+    }
+
+    .jq-selectbox__select {
+      height: 40px;
+      padding: 0 18px;
+      border: 1px solid #7d7d7d;
+      border-bottom-color: #7d7d7d;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      font-family: 'Roboto-Regular', sans-serif;
+      color: #707070;
+      text-shadow: none;
+      line-height: 40px;
+    }
+
+    .jq-selectbox {
+
+      &__trigger {
+        border-left: none;
+
+        &-arrow {
+          border: none;
+          top: 0;
+          right: 20px;
+          font-size: 15px;
+          line-height: 40px;
+
+          &::before {
+            font-family: 'icomoon';
+            content: '\f0d7';
+            color: #444444;
+          }
+        }
+      }
+
+      &__dropdown {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        background: #FFF;
+        box-shadow: none;
+        font: 14px/18px Arial, sans-serif;
+      }
+
+      li {
+        padding-left: 18px;
+      }
+    }
+
+    .jq-file {
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+
+      &__name {
+        box-sizing: border-box;
+        width: 100%;
+        height: 40px;
+        padding: 0 18px 0 100px;
+        border: 1px solid #7d7d7d;
+        border-bottom-color: #B3B3B3;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        font-family: 'Roboto-Regular', sans-serif;
+        color: #707070;
+        text-shadow: none;
+        line-height: 40px;
+      }
+
+      &__browse {
+        position: absolute;
+        top: 7px;
+        left: 9px;
+        right: auto;
+        padding: 0 13px;
+        border: 1px solid #d7d7d7;
+        border-radius: 0;
+        background: white;
+        box-shadow: none;
+        text-shadow: none;
+        font-size: 12px;
+        height: 26px;
+        line-height: 26px;
+        padding: 0 12px;
+        color: #444444;
+        max-width: 107px;
+      }
+
+      &:hover {
+        .jq-file__browse {
+          background: none;
+        }
+      }
+    }
+  }
+}
+
 //END OF PAGE UPLOAD PRODUCTS STYLES
 
 
 
 //START OF PAGE WITHDRAWALS STYLES
+.withdrawals {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+  }
+
+  &__col {
+    width: 100%;
+    background-color: white;
+    max-width: 570px;
+    border: 1px solid #d7d7d7;
+    height: 100%;
+  }
+
+  &__title {
+    padding: 20px 33px;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    padding: 0 40px 0 35px;
+  }
+
+  &__form-line {
+    margin-bottom: 25px;
+
+    label {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+      @include f500;
+      margin-bottom: 20px;
+      color: $bg;
+
+      span {
+        color: $green;
+        font-size: 24px;
+      }
+    }
+
+    input {
+      width: 100%;
+      display: block;
+      border: 1px solid #d7d7d7;
+      background-color: #f9f9f9;
+      height: 40px;
+      padding: 0 18px;
+
+      &::placeholder {
+        color: #707070;
+      }
+    }
+
+    select {}
+
+    .jq-selectbox {
+      width: 100%;
+    }
+
+    .jq-selectbox__select {
+      height: 40px;
+      padding: 0 18px;
+      border: 1px solid #d7d7d7;
+      border-bottom-color: #d7d7d7;
+      border-radius: 0;
+      background: #f9f9f9;
+      box-shadow: none;
+      font-family: 'Roboto-Regular', sans-serif;
+      color: #707070;
+      text-shadow: none;
+      line-height: 40px;
+    }
+
+    .jq-selectbox {
+
+      &__trigger {
+        border-left: none;
+
+        &-arrow {
+          border: none;
+          top: 0;
+          right: 20px;
+          font-size: 15px;
+          line-height: 40px;
+
+          &::before {
+            font-family: 'icomoon';
+            content: '\f0d7';
+            color: #444444;
+          }
+        }
+      }
+
+      &__dropdown {
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        background: #FFF;
+        box-shadow: none;
+        font: 14px/18px Arial, sans-serif;
+      }
+
+      li {
+        padding-left: 18px;
+      }
+    }
+  }
+
+  button {
+    color: #ffffff;
+    background-color: $green;
+    border: none;
+    padding: 18px 30px;
+    @include f500;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 50px;
+  }
+
+  &__content-items {
+    padding-bottom: 35px;
+  }
+
+  &__content-item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    @include f500;
+    color: #444444;
+    &:nth-child(odd){
+      background-color: #f9f9f9;
+    }
+
+    &__date {
+      width: 155px;
+      padding-left: 20px;
+    }
+
+    &__email {
+      width: 180px;
+    }
+
+    &__price {
+      width: 70px;
+      @include f700;
+    }
+
+    &__status {
+      width: 88px;
+      @include f700;
+    }
+
+    .status-paid{
+      color: $green;
+    }
+
+  }
+}
+
 //END OF PAGE WITHDRAWALS STYLES
 
 @import 'media';
