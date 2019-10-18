@@ -3,13 +3,30 @@
     display: block;
   }
 
-  .withdrawals__col{
+  .withdrawals__col {
     max-width: 100%;
     margin-bottom: 20px;
   }
 
-  .withdrawals__content-item{
+  .withdrawals__content-item {
     max-width: 490px;
+  }
+  .contact{
+    &__form{
+      label{
+        width: 100%;
+        input{
+          min-width: 100%;
+          width: 100%;
+        }
+        &:first-child{
+          margin-right: 15px;
+        }
+      }
+      textarea{
+        max-width: 100%;
+      }
+    }
   }
 }
 
@@ -44,6 +61,35 @@
   }
 }
 
+@media (max-width: 1100px){
+  .contact{
+    &__box{
+      flex-wrap: wrap;
+    }
+    &__details{
+      display: flex;
+      max-width: 100%;
+      justify-content: center;
+      &-item+div{
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1020px) {
+  .settings {
+    .product-one__tabs.settings__tabs {
+      display: block;
+
+      .tabs {
+        margin-bottom: 15px;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 @media (max-width: 960px) {
   .page-404__404::after {
     position: absolute;
@@ -53,7 +99,7 @@
     height: 97px;
     margin-left: 21px;
     background-size: cover;
-}
+  }
 }
 
 @media (max-width: 910px) {
@@ -84,6 +130,37 @@
     bottom: 35px;
     right: 35px;
   }
+
+  .profile{
+    &__inner{
+      flex-direction: column;
+
+    }
+    &__aside{
+      margin-top: 15px;
+      max-width: none;
+      .aside__item{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .aside__title{
+          width: 100%;
+        }
+        .product-author__box, .author__awards-list{
+          margin: 0 auto;
+        }
+      }
+      &>.footer__social-link{
+        text-align: center;
+      }
+    }
+
+    &__content{
+      order: -1;
+    }
+  }
 }
 
 @media (max-width: 840px) {
@@ -94,6 +171,7 @@
     align-items: center;
     overflow: hidden;
     transition: all .5s;
+    padding: 10px;
 
     &.active,
     &.drop__menu {
@@ -104,6 +182,11 @@
 
     .btn--off {
       display: none;
+    }
+
+    &__inner {
+      margin: 0;
+      width: 100%;
     }
   }
 
@@ -269,49 +352,115 @@
     display: block;
   }
 
-  .upload-line{
+  .upload-line {
     display: block;
 
-    label{
+    label {
       margin-bottom: 10px;
       display: inline-block;
     }
 
-    .upload-line .jq-file__name{
+    .upload-line .jq-file__name {
       padding: 0 18px 0 120px;
     }
   }
 
-  .upload__inner{
-    button{
+  .upload__inner {
+    button {
       margin-left: 0px;
 
     }
   }
 
+  .settings {
+    .page-box .settings__line {
+      display: block;
+
+      label {
+        margin-bottom: 10px;
+        display: inline-block;
+      }
+    }
+
+    button {
+      width: 100%;
+      max-width: 540px;
+    }
+  }
+
+  .contact__form{
+    button{
+      width: 100%;
+    }
+  }
 }
 
-@media (max-width: 730px){
-  .page-404__404{
+@media (max-width: 750px){
+  .contact__details{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    address{
+      width: 100%;
+    }
+    &-item{
+      &+div{
+        margin-left: 0;
+      }
+      &__text{
+      min-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 730px) {
+  .page-404__404 {
     font-size: 30vw;
     line-height: 30vw;
   }
 
-  .page-404__inner{
+  .page-404__inner {
     padding: 0 15px;
   }
 
-  .page-404__title{
+  .page-404__title {
     font-size: 5vw;
   }
 
-  .page-404__text{
+  .page-404__text {
     font-size: 3vw;
     width: 100%;
   }
 
-  .upload__inner-content{
+  .upload__inner-content {
     padding: 0 20px;
+  }
+
+  .settings .page-box__content {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px){
+  .profile__content-banner__image{
+    min-height: 50vw;
+  }
+  
+  .profile__content-items{
+    display: flex;
+    flex-wrap: wrap;
+    .profile-item{
+      width: 50%;
+      &+.profile-item{
+        border-left: none;
+      }
+      &:nth-child(n+3){
+        border-top: 1px solid #dedede;
+      }
+      &:nth-child(odd){
+        border-right: 1px solid #dedede;
+      }
+    }
   }
 }
 
@@ -344,69 +493,92 @@
     }
   }
 
-  .withdrawals__content{
+  .withdrawals__content {
     padding: 0 15px;
 
-    &-items{
+    &-items {
       overflow-x: scroll;
     }
 
-    &-item{
+    &-item {
       min-width: 490px;
     }
   }
 
-  .page-404{
-    .container{
+  .page-404 {
+    .container {
       padding: 0;
     }
   }
 }
 
 @media(max-width: 500px) {
-  .header__top{
+  .header__top {
     padding: 0 15px;
   }
-  
-  .search.page-search .search__inner{
+
+  .search.page-search .search__inner {
     padding: 55px 15px 70px;
   }
 
   .breadcrumbs__inner {
     padding: 15px;
-}
-  
-  .container{
-      padding: 0;
-    }
+  }
 
-    .about__wrapper{
-      margin-bottom: 50px;
-    }
+  .container {
+    padding: 0;
+  }
 
-    .about__inner{
-
-
-      padding: 30px;
-
-      h4{
-        padding-bottom: 0;
-      }
-    
-      p+h4{
-        padding-top: 15px;
-      }
-    }
-
-  .upload__inner{
+  .about__wrapper {
     margin-bottom: 50px;
   }
+
+  .about__inner {
+    padding: 30px;
+
+    h4 {
+      padding-bottom: 0;
+    }
+
+    p+h4 {
+      padding-top: 15px;
+    }
+  }
+
+  .upload__inner {
+    margin-bottom: 50px;
+  }
+
+  .settings{
+    padding-bottom: 50px;
+    &__tabs{
+      margin-bottom: 0;
+    }
+  }
+
+  .contact__wrapper{
+    margin-bottom: 50px;
+    padding: 0 15px;
+
+    .contact__map{
+      max-height: calc(100vw - 15px);
+    }
+  }
+
+  .profile__content-items{
+    margin: 0 15px;
+  }
+
+  .profile__aside-message, .profile__aside-following{
+    margin: 20px auto;
+    width: 90vw;
+  }
+
 }
 
 @media (max-width: 470px) {
   .menu {
     height: 100%;
-    padding: 10px;
     margin-left: 0;
 
     &.active {
@@ -420,11 +592,6 @@
         display: flex;
         padding: 0;
       }
-    }
-
-    &__inner {
-      margin: 0;
-      width: 100%;
     }
   }
 
@@ -448,12 +615,12 @@
     margin: 0 5px;
   }
 
-  .page-404__404::after{
+  .page-404__404::after {
     margin-left: 12px;
   }
 
-  .upload__inner{
-    button{
+  .upload__inner {
+    button {
       width: 100%;
     }
   }
