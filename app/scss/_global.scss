@@ -1,0 +1,147 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
+html, body{
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+body{
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+  color: $text;
+}
+
+.header{
+  background-color: white;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+
+.page-content{
+  background-color: $grey;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+a{
+display: inline-block;
+text-decoration: none;
+color: $text;
+}
+
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid{
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media(max-width: 720px){
+  .container-fluid{
+     padding: 0 15px;
+  }
+}
+
+.title{
+  text-align: center;
+  color: $bg;
+  @include f700;
+  line-height: 60px;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.rate-star{
+  display: inline-block;
+  margin: auto 13px auto 0;
+}
+
+.breadcrumbs{
+  &__inner{
+    padding: 45px 0px 40px;
+  }
+  &__list{
+    li{
+      position: relative;
+      display: inline-block;
+      
+      &+li{
+        padding-left: 24px;
+        &::before{
+          content: '-';
+          position: absolute;
+          left: 8px;
+          color: $green;
+        }
+      }
+      &:last-child{
+        a, span{
+          color: $bg;
+        }
+      }
+    }
+    a{
+      color: #b0bec5;
+    }
+  }
+}
+
+.angle-right{
+  position: relative;
+  padding-left: 15px;
+  &::before{
+    content: '\f105';
+    font-family: 'icomoon';
+    left: 0;
+    color: $green;
+    position: absolute;
+    font-size: 14px;
+  }
+}
+
+.scrollup {
+  width: 26px;
+  height: 25px;
+  position: fixed;
+  bottom: 50px;
+  right: 100px;
+  display: none;
+  z-index: 25;
+  text-indent: -9999px;
+  background: url('../images/icons/arrow-top.png') no-repeat;
+}
+
+.head__pagetitle{
+  @include f500;
+  font-size: 24px;
+  color: #444;
+  padding: 23px 27px;
+  border-bottom: 1px solid #d7d7d7;
+}
