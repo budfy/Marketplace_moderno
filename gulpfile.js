@@ -74,7 +74,9 @@ gulp.task('browser-sync', function() {
       server: {
           baseDir: "app/"
       },
-      browser: ["firefox"]
+      browser: ["chrome"],
+      tunnel: "moderno",
+      host: "192.168.0.103"
   });
 });
 
