@@ -1114,6 +1114,7 @@
   @include f500;
   padding-left: 30px;
   position: relative;
+  font-style: unset;
 
   &::before {
     font-family: 'icomoon';

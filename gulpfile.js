@@ -47,6 +47,13 @@ gulp.task('style', function(){
   .pipe(gulp.dest('app/css'))
 });
 
+gulp.task('minjs', function(){
+  return gulp.src(['app/js/main.js'])
+  .pipe(uglify())
+  .pipe(rename({suffix: '.min'}))
+  .pipe(gulp.dest('app/js')) 
+});
+
 gulp.task('html', function(){
   return gulp.src('app/*.html')
   .pipe(browserSync.reload({stream: true})) 
@@ -75,9 +82,9 @@ gulp.task('browser-sync', function() {
           baseDir: "app/"
       },
       browser: ["chrome"],
-      tunnel: "moderno",
+      //tunnel: "moderno",
       host: "192.168.0.103"
   });
 });
 
-gulp.task('default', gulp.parallel('sass','watch','browser-sync', 'script', 'style'))
+gulp.task('default', gulp.parallel('sass','watch','browser-sync', 'script', 'style', 'minjs'))
